@@ -1,0 +1,608 @@
+# eol lf
+--- a/infamous-recomp/spu/jobmod_cdea34a3d08b_e2728/spu_recomp_rc.c
++++ b/infamous-recomp/spu/jobmod_cdea34a3d08b_e2728/spu_recomp_rc.c
+@@ -150,14 +150,13 @@
+         r2 = spu_ceqbi(r6, 0);
+         r17 = spu_sfi(r3, 0);
+         r16 = spu_xsbh(r2);
+-        if (r16._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->pc = 0x40F8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000040F8); r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r31 = ctx->gpr[31]; r32 = ctx->gpr[32]; spu_rc_ls = ctx->ls; }
++        if (r16._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->pc = 0x40F8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000040F8); }
+         r32 = spu_ceqbi(r17, 0);
+         r31 = spu_xsbh(r32);
+         /* nop */;
+-        if (r31._u16[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->pc = 0x41AC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041AC); r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r31 = ctx->gpr[31]; r32 = ctx->gpr[32]; spu_rc_ls = ctx->ls; }
++        if (r31._u16[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->pc = 0x41AC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041AC); }
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32;
+         { ctx->pc = 0x40F8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000040F8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000040F8(spu_context* ctx) {
+@@ -205,10 +204,9 @@
+         r4 = spu_fs_k(r13, r12, 2);
+         r9 = spu_fcgt(r33, r6);
+         r8 = spu_or(r47, r9);
+-        if (r8._u32[0] == 0) { ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->pc = 0x41B4; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041B4); r4 = ctx->gpr[4]; r6 = ctx->gpr[6]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r40 = ctx->gpr[40]; r41 = ctx->gpr[41]; r42 = ctx->gpr[42]; r43 = ctx->gpr[43]; r44 = ctx->gpr[44]; r45 = ctx->gpr[45]; r46 = ctx->gpr[46]; r47 = ctx->gpr[47]; r49 = ctx->gpr[49]; r50 = ctx->gpr[50]; r51 = ctx->gpr[51]; r52 = ctx->gpr[52]; r53 = ctx->gpr[53]; r54 = ctx->gpr[54]; r55 = ctx->gpr[55]; r56 = ctx->gpr[56]; r57 = ctx->gpr[57]; r58 = ctx->gpr[58]; r59 = ctx->gpr[59]; r60 = ctx->gpr[60]; r61 = ctx->gpr[61]; r62 = ctx->gpr[62]; r63 = ctx->gpr[63]; r64 = ctx->gpr[64]; r65 = ctx->gpr[65]; r66 = ctx->gpr[66]; r67 = ctx->gpr[67]; spu_rc_ls = ctx->ls; }
++        if (r8._u32[0] == 0) { ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->pc = 0x41B4; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041B4); }
+         ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67;
+         { ctx->pc = 0x41A4; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041A4); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000041A4(spu_context* ctx) {
+@@ -232,12 +230,11 @@
+ 	u128 r4 = ctx->gpr[4], r5 = ctx->gpr[5], r15 = ctx->gpr[15], r16 = ctx->gpr[16], r68 = ctx->gpr[68], r70 = ctx->gpr[70];
+         r70 = spu_ilhu(0x3F80);
+         r68 = spu_fcgt(r4, r70);
+-        if (r68._u32[0] != 0) { ctx->gpr[68] = r68; ctx->gpr[70] = r70; ctx->pc = 0x41A4; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041A4); r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r68 = ctx->gpr[68]; r70 = ctx->gpr[70]; spu_rc_ls = ctx->ls; }
++        if (r68._u32[0] != 0) { ctx->gpr[68] = r68; ctx->gpr[70] = r70; ctx->pc = 0x41A4; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041A4); }
+         r5 = spu_ori(r15, 0);
+-        if (r16._u16[0] == 0) { ctx->gpr[5] = r5; ctx->gpr[68] = r68; ctx->gpr[70] = r70; ctx->pc = 0x41F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041F0); r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r68 = ctx->gpr[68]; r70 = ctx->gpr[70]; spu_rc_ls = ctx->ls; }
++        if (r16._u16[0] == 0) { ctx->gpr[5] = r5; ctx->gpr[68] = r68; ctx->gpr[70] = r70; ctx->pc = 0x41F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041F0); }
+         ctx->gpr[5] = r5; ctx->gpr[68] = r68; ctx->gpr[70] = r70;
+         { ctx->pc = 0x41C8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041C8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000041C8(spu_context* ctx) {
+@@ -248,7 +245,7 @@
+         /* nop */;
+         r18 = spu_xsbh(r71);
+         /* nop */;
+-        if (r18._u16[0] != 0) { ctx->gpr[18] = r18; ctx->gpr[71] = r71; ctx->pc = 0x41AC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041AC); r3 = ctx->gpr[3]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r11 = ctx->gpr[11]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r71 = ctx->gpr[71]; r72 = ctx->gpr[72]; spu_rc_ls = ctx->ls; }
++        if (r18._u16[0] != 0) { ctx->gpr[18] = r18; ctx->gpr[71] = r71; ctx->pc = 0x41AC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041AC); }
+         r72 = spu_fma_k(r11, r6, r5, 7);
+         r3 = spu_il(1);
+         spu_ls_write128(ctx, r19._u32[0] + 0x0, r72);
+@@ -263,7 +260,6 @@
+         spu_ls_write128(ctx, r18._u32[0] + 0x0, r15);
+         ctx->gpr[15] = r15;
+         { ctx->pc = 0x41C8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000041C8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004200(spu_context* ctx) {
+@@ -374,7 +370,6 @@
+         r4 = spu_ila(0xFFFF);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4;
+         { ctx->pc = 0x4200; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004200); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004388(spu_context* ctx) {
+@@ -851,7 +846,6 @@
+         r13 = spu_selb(r2, r40, r38);
+         ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79;
+         { ctx->pc = 0x4990; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004990); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004990(spu_context* ctx) {
+@@ -908,12 +902,11 @@
+         r7 = spu_fcgt(r9, r4);
+         r38 = spu_gb(r7);
+         r8 = spu_ceqi(r38, 15);
+-        if (r8._u32[0] != 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[10] = r10; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[23] = r23; ctx->gpr[25] = r25; ctx->gpr[28] = r28; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[41] = r41; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[69] = r69; ctx->pc = 0x4A6C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A6C); r1 = ctx->gpr[1]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r40 = ctx->gpr[40]; r41 = ctx->gpr[41]; r43 = ctx->gpr[43]; r44 = ctx->gpr[44]; r45 = ctx->gpr[45]; r46 = ctx->gpr[46]; r47 = ctx->gpr[47]; r48 = ctx->gpr[48]; r49 = ctx->gpr[49]; r50 = ctx->gpr[50]; r51 = ctx->gpr[51]; r52 = ctx->gpr[52]; r53 = ctx->gpr[53]; r54 = ctx->gpr[54]; r55 = ctx->gpr[55]; r56 = ctx->gpr[56]; r57 = ctx->gpr[57]; r58 = ctx->gpr[58]; r59 = ctx->gpr[59]; r60 = ctx->gpr[60]; r61 = ctx->gpr[61]; r62 = ctx->gpr[62]; r63 = ctx->gpr[63]; r64 = ctx->gpr[64]; r65 = ctx->gpr[65]; r66 = ctx->gpr[66]; r67 = ctx->gpr[67]; r69 = ctx->gpr[69]; spu_rc_ls = ctx->ls; }
++        if (r8._u32[0] != 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[10] = r10; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[23] = r23; ctx->gpr[25] = r25; ctx->gpr[28] = r28; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[41] = r41; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[69] = r69; ctx->pc = 0x4A6C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A6C); }
+         if (r10._u32[0] == 0) goto loc_00004990;
+         r3 = spu_il(1);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[10] = r10; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[23] = r23; ctx->gpr[25] = r25; ctx->gpr[28] = r28; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[41] = r41; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[69] = r69;
+         { ctx->pc = 0x4A64; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A64); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A64(spu_context* ctx) {
+@@ -930,7 +923,6 @@
+         r3 = spu_il(0);
+         ctx->gpr[3] = r3;
+         { ctx->pc = 0x4A64; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A64); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004A78(spu_context* ctx) {
+@@ -983,10 +975,9 @@
+         r2 = spu_xsbh(r7);
+         r4 = spu_shufb(r3, r6, r5);
+         spu_ls_write128(ctx, r82._u32[0] + 0xE0, r4);
+-        if (r2._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->pc = 0x4B68; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004B68); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r83 = ctx->gpr[83]; r84 = ctx->gpr[84]; r85 = ctx->gpr[85]; r86 = ctx->gpr[86]; spu_rc_ls = ctx->ls; }
++        if (r2._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->pc = 0x4B68; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004B68); }
+         ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7;
+         { ctx->pc = 0x4B30; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004B30); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004B30(spu_context* ctx) {
+@@ -1044,7 +1035,6 @@
+         /* nop */;
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[18] = r18; ctx->gpr[80] = r80;
+         { ctx->pc = 0x4BD0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004BD0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004BD0(spu_context* ctx) {
+@@ -1062,7 +1052,6 @@
+         spu_ls_write128(ctx, r82._u32[0] + 0xA0, r3);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[80] = r80;
+         { ctx->pc = 0x4B30; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004B30); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004BF8(spu_context* ctx) {
+@@ -1123,7 +1112,7 @@
+         r4 = spu_il(0);
+         r2 = spu_ceqbi(r3, 0);
+         r3 = spu_xsbh(r2);
+-        if (r3._u16[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->pc = 0x4EC8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EC8); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r41 = ctx->gpr[41]; r42 = ctx->gpr[42]; r43 = ctx->gpr[43]; r44 = ctx->gpr[44]; r45 = ctx->gpr[45]; r46 = ctx->gpr[46]; r47 = ctx->gpr[47]; r48 = ctx->gpr[48]; r49 = ctx->gpr[49]; r50 = ctx->gpr[50]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r83 = ctx->gpr[83]; r84 = ctx->gpr[84]; spu_rc_ls = ctx->ls; }
++        if (r3._u16[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->pc = 0x4EC8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EC8); }
+         r41 = spu_csflt(r80, 155);
+         r10 = spu_ls_read128(ctx, r1._u32[0] + 0x20);
+         r4 = spu_cgti(r80, 0);
+@@ -1145,7 +1134,7 @@
+         r17 = spu_fm_k(r6, r35, 0);
+         r8 = spu_fa_k(r10, r17, 1);
+         /* nop */;
+-        if (r4._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[26] = r26; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->pc = 0x4EEC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EEC); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r41 = ctx->gpr[41]; r42 = ctx->gpr[42]; r43 = ctx->gpr[43]; r44 = ctx->gpr[44]; r45 = ctx->gpr[45]; r46 = ctx->gpr[46]; r47 = ctx->gpr[47]; r48 = ctx->gpr[48]; r49 = ctx->gpr[49]; r50 = ctx->gpr[50]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r83 = ctx->gpr[83]; r84 = ctx->gpr[84]; spu_rc_ls = ctx->ls; }
++        if (r4._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[26] = r26; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->pc = 0x4EEC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EEC); }
+         r48 = spu_fs_k(r81, r84, 3);
+         /* branch hint (ignored) */;
+         r23 = spu_ori(r9, 0);
+@@ -1167,7 +1156,6 @@
+         r14 = spu_fma_k(r47, r46, r46, 6);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50;
+         { ctx->pc = 0x4D74; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004D74); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004D74(spu_context* ctx) {
+@@ -1203,7 +1191,6 @@
+         if (r52._u32[0] == 0) goto loc_00004D74;
+         ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[18] = r18; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73;
+         { ctx->pc = 0x4DE0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004DE0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004DE0(spu_context* ctx) {
+@@ -1269,7 +1256,6 @@
+         /* nop */;
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[46] = r46; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->gpr[83] = r83; ctx->gpr[84] = r84;
+         { ctx->pc = 0x4EC8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EC8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EC8(spu_context* ctx) {
+@@ -1294,7 +1280,6 @@
+         r13 = spu_ori(r25, 0);
+         ctx->gpr[13] = r13; ctx->gpr[25] = r25;
+         { ctx->pc = 0x4DE0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004DE0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004EF8(spu_context* ctx) {
+@@ -1315,7 +1300,7 @@
+         r1 = spu_ai(r1, -48);
+         r80 = spu_shufb(r2, r2, r11);
+         r2 = spu_il(0);
+-        if (r3._u32[0] != 0) { ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[80] = r80; ctx->pc = 0x4F70; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004F70); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r80 = ctx->gpr[80]; spu_rc_ls = ctx->ls; }
++        if (r3._u32[0] != 0) { ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[80] = r80; ctx->pc = 0x4F70; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004F70); }
+         r13 = spu_ls_read128(ctx, r7._u32[0] + 0xB0);
+         r12 = spu_ls_read128(ctx, r7._u32[0] + 0x90);
+         r14 = spu_ls_read128(ctx, r7._u32[0] + 0xA0);
+@@ -1334,7 +1319,6 @@
+         r2 = spu_andi(r4, 255);
+         ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8;
+         { ctx->pc = 0x4F70; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004F70); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00004F70(spu_context* ctx) {
+@@ -1459,7 +1443,6 @@
+         r6 = spu_fma_k(r6, r2, r16, 2);
+         ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[83] = r83; ctx->gpr[84] = r84; ctx->gpr[87] = r87; ctx->gpr[90] = r90; ctx->gpr[94] = r94; ctx->gpr[95] = r95; ctx->gpr[96] = r96;
+         { ctx->pc = 0x5130; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005130); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005130(spu_context* ctx) {
+@@ -1487,7 +1470,7 @@
+         r89 = spu_shli(r87, 2);
+         r97 = spu_rotqby(r77, r11);
+         r99 = spu_rotqby(r75, r76);
+-        if (r5._u32[0] == 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[89] = r89; ctx->gpr[92] = r92; ctx->gpr[97] = r97; ctx->gpr[99] = r99; ctx->pc = 0x5350; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005350); r1 = ctx->gpr[1]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r11 = ctx->gpr[11]; r70 = ctx->gpr[70]; r71 = ctx->gpr[71]; r72 = ctx->gpr[72]; r73 = ctx->gpr[73]; r74 = ctx->gpr[74]; r75 = ctx->gpr[75]; r76 = ctx->gpr[76]; r77 = ctx->gpr[77]; r78 = ctx->gpr[78]; r79 = ctx->gpr[79]; r81 = ctx->gpr[81]; r83 = ctx->gpr[83]; r84 = ctx->gpr[84]; r85 = ctx->gpr[85]; r86 = ctx->gpr[86]; r87 = ctx->gpr[87]; r88 = ctx->gpr[88]; r89 = ctx->gpr[89]; r90 = ctx->gpr[90]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r94 = ctx->gpr[94]; r96 = ctx->gpr[96]; r97 = ctx->gpr[97]; r98 = ctx->gpr[98]; r99 = ctx->gpr[99]; r100 = ctx->gpr[100]; spu_rc_ls = ctx->ls; }
++        if (r5._u32[0] == 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[89] = r89; ctx->gpr[92] = r92; ctx->gpr[97] = r97; ctx->gpr[99] = r99; ctx->pc = 0x5350; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005350); }
+         r79 = spu_il(1);
+         r91 = spu_fsmbi(0x0);
+         r81 = spu_ai(r1, 224);
+@@ -1500,7 +1483,6 @@
+         /* nop */;
+         ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[81] = r81; ctx->gpr[85] = r85; ctx->gpr[86] = r86; ctx->gpr[88] = r88; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[92] = r92; ctx->gpr[97] = r97; ctx->gpr[98] = r98; ctx->gpr[99] = r99; ctx->gpr[100] = r100;
+         { ctx->pc = 0x51B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000051B0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000051B0(spu_context* ctx) {
+@@ -1524,7 +1506,6 @@
+         r93 = spu_a(r99, r80);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[12] = r12; ctx->gpr[16] = r16; ctx->gpr[18] = r18; ctx->gpr[80] = r80; ctx->gpr[82] = r82; ctx->gpr[93] = r93;
+         { ctx->pc = 0x51F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000051F0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000051F0(spu_context* ctx) {
+@@ -1538,12 +1519,11 @@
+         r5 = spu_ai(r5, 16);
+         r13 = spu_ceqi(r5, 64);
+         if (r13._u32[0] == 0) goto loc_000051F0;
+-        if (r98._u32[0] == 0) { ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[13] = r13; ctx->gpr[17] = r17; ctx->gpr[21] = r21; ctx->pc = 0x52FC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC); r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r8 = ctx->gpr[8]; r13 = ctx->gpr[13]; r17 = ctx->gpr[17]; r21 = ctx->gpr[21]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r93 = ctx->gpr[93]; r94 = ctx->gpr[94]; r95 = ctx->gpr[95]; r98 = ctx->gpr[98]; spu_rc_ls = ctx->ls; }
++        if (r98._u32[0] == 0) { ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[13] = r13; ctx->gpr[17] = r17; ctx->gpr[21] = r21; ctx->pc = 0x52FC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC); }
+         r80 = spu_ori(r93, 0);
+         r82 = spu_fsmbi(0x0);
+         ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[13] = r13; ctx->gpr[17] = r17; ctx->gpr[21] = r21; ctx->gpr[80] = r80; ctx->gpr[82] = r82;
+         { ctx->pc = 0x5218; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005218); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005218(spu_context* ctx) {
+@@ -1605,7 +1585,6 @@
+         /* nop */;
+         ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[11] = r11; ctx->gpr[14] = r14; ctx->gpr[19] = r19; ctx->gpr[22] = r22; ctx->gpr[80] = r80;
+         { ctx->pc = 0x52D0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052D0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000052D0(spu_context* ctx) {
+@@ -1622,10 +1601,9 @@
+         if (r32._u32[0] == 0) goto loc_000052D0;
+         r82 = spu_ai(r82, 1);
+         r36 = spu_ceq(r87, r82);
+-        if (r36._u32[0] == 0) { ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[82] = r82; ctx->pc = 0x5218; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005218); r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r84 = ctx->gpr[84]; r87 = ctx->gpr[87]; spu_rc_ls = ctx->ls; }
++        if (r36._u32[0] == 0) { ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[82] = r82; ctx->pc = 0x5218; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005218); }
+         ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[82] = r82;
+         { ctx->pc = 0x52FC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC(spu_context* ctx) {
+@@ -1659,7 +1637,7 @@
+ 	uint8_t* spu_rc_ls = ctx->ls;  /* v95: LS base (spu_helpers_vec.h LS accessors) */
+ 	u128 r3 = ctx->gpr[3], r4 = ctx->gpr[4], r5 = ctx->gpr[5], r6 = ctx->gpr[6], r37 = ctx->gpr[37], r38 = ctx->gpr[38], r39 = ctx->gpr[39], r85 = ctx->gpr[85], r89 = ctx->gpr[89], r91 = ctx->gpr[91], r92 = ctx->gpr[92], r93 = ctx->gpr[93], r96 = ctx->gpr[96], r97 = ctx->gpr[97];
+         r37 = spu_ceq(r85, r38);
+-        if (r37._u32[0] == 0) { ctx->gpr[37] = r37; ctx->pc = 0x52FC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC); r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r85 = ctx->gpr[85]; r89 = ctx->gpr[89]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r93 = ctx->gpr[93]; r96 = ctx->gpr[96]; r97 = ctx->gpr[97]; spu_rc_ls = ctx->ls; }
++        if (r37._u32[0] == 0) { ctx->gpr[37] = r37; ctx->pc = 0x52FC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000052FC); }
+         r91 = spu_ai(r91, 1);
+         r6 = spu_shlqbyi(r93, 0);
+         r3 = spu_ori(r97, 0);
+@@ -1669,11 +1647,10 @@
+         ctx->gpr[0] = spu_link(0x5340); { int32_t _si = (int32_t)ctx->image_id; ctx->host_depth++; jobmod_cdea34a3d08b_e2728_rc_spu_func_000063F0(ctx); spu_drain_call(ctx, 0x5340); ctx->host_depth--; spu_img_restore(ctx, _si); }
+         r89 = ctx->gpr[89]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r96 = ctx->gpr[96]; spu_rc_ls = ctx->ls;
+         r39 = spu_ceq(r96, r91);
+-        if (r39._u32[0] != 0) { ctx->gpr[39] = r39; ctx->pc = 0x5350; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005350); r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r85 = ctx->gpr[85]; r89 = ctx->gpr[89]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r93 = ctx->gpr[93]; r96 = ctx->gpr[96]; r97 = ctx->gpr[97]; spu_rc_ls = ctx->ls; }
++        if (r39._u32[0] != 0) { ctx->gpr[39] = r39; ctx->pc = 0x5350; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005350); }
+         r92 = spu_a(r92, r89);
+         ctx->gpr[39] = r39; ctx->gpr[92] = r92;
+         { ctx->pc = 0x51B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000051B0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005350(spu_context* ctx) {
+@@ -2013,7 +1990,6 @@
+         r125 = spu_xor(r2, r94);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[90] = r90; ctx->gpr[92] = r92; ctx->gpr[121] = r121; ctx->gpr[124] = r124; ctx->gpr[125] = r125;
+         { ctx->pc = 0x5860; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005860); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005860(spu_context* ctx) {
+@@ -2043,7 +2019,6 @@
+         r82 = spu_shufb(r4, r4, r96);
+         ctx->gpr[4] = r4; ctx->gpr[48] = r48; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93;
+         { ctx->pc = 0x59B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000059B0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000058BC(spu_context* ctx) {
+@@ -2118,7 +2093,6 @@
+         spu_ls_write128(ctx, r84._u32[0] + r61._u32[0], r62);
+         ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79;
+         { ctx->pc = 0x59B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000059B0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000059B0(spu_context* ctx) {
+@@ -2129,7 +2103,7 @@
+         r7 = spu_fcgt(r90, r11);
+         r34 = spu_gb(r7);
+         r33 = spu_ceqi(r34, 15);
+-        if (r33._u32[0] != 0) { ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[11] = r11; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->pc = 0x58BC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000058BC); r5 = ctx->gpr[5]; r7 = ctx->gpr[7]; r11 = ctx->gpr[11]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r84 = ctx->gpr[84]; r85 = ctx->gpr[85]; r87 = ctx->gpr[87]; r88 = ctx->gpr[88]; r89 = ctx->gpr[89]; r90 = ctx->gpr[90]; r91 = ctx->gpr[91]; r93 = ctx->gpr[93]; spu_rc_ls = ctx->ls; }
++        if (r33._u32[0] != 0) { ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[11] = r11; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->pc = 0x58BC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000058BC); }
+         /* branch hint (ignored) */;
+         r89 = spu_ilhu(0x40C9);
+         r91 = spu_ilhu(0x4040);
+@@ -2141,7 +2115,6 @@
+         /* nop */;
+         ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[11] = r11; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93;
+         { ctx->pc = 0x5ABC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005ABC); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000059F0(spu_context* ctx) {
+@@ -2206,7 +2179,6 @@
+         spu_ls_write128(ctx, r84._u32[0] + r35._u32[0], r36);
+         ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[11] = r11; ctx->gpr[19] = r19; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51;
+         { ctx->pc = 0x5ABC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005ABC); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005ABC(spu_context* ctx) {
+@@ -2226,7 +2198,7 @@
+         r65 = spu_ceqi(r68, 15);
+         r64 = spu_ceqi(r66, 15);
+         r4 = spu_sfi(r65, 0);
+-        if (r64._u32[0] != 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[12] = r12; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->pc = 0x59F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000059F0); r2 = ctx->gpr[2]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r31 = ctx->gpr[31]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r64 = ctx->gpr[64]; r65 = ctx->gpr[65]; r66 = ctx->gpr[66]; r67 = ctx->gpr[67]; r68 = ctx->gpr[68]; r69 = ctx->gpr[69]; r70 = ctx->gpr[70]; r71 = ctx->gpr[71]; r72 = ctx->gpr[72]; r73 = ctx->gpr[73]; r74 = ctx->gpr[74]; r75 = ctx->gpr[75]; r76 = ctx->gpr[76]; r77 = ctx->gpr[77]; r78 = ctx->gpr[78]; r79 = ctx->gpr[79]; r82 = ctx->gpr[82]; r85 = ctx->gpr[85]; r86 = ctx->gpr[86]; r87 = ctx->gpr[87]; r88 = ctx->gpr[88]; r89 = ctx->gpr[89]; r90 = ctx->gpr[90]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r93 = ctx->gpr[93]; r97 = ctx->gpr[97]; r101 = ctx->gpr[101]; r117 = ctx->gpr[117]; r118 = ctx->gpr[118]; r119 = ctx->gpr[119]; r120 = ctx->gpr[120]; r123 = ctx->gpr[123]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r64._u32[0] != 0) { ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[12] = r12; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->pc = 0x59F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000059F0); }
+         r24 = spu_ilhu(0x3F80);
+         r6 = spu_frest(r12);
+         r23 = spu_fs_k(r5, r11, 3);
+@@ -2271,7 +2243,7 @@
+         r91 = spu_fnms_k(r93, r73, r24, 7);
+         r89 = spu_fma_k(r91, r93, r93, 6);
+         r23 = spu_fm_k(r89, r82, 0);
+-        if (r85._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[82] = r82; ctx->gpr[85] = r85; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93; ctx->pc = 0x6020; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006020); r2 = ctx->gpr[2]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r31 = ctx->gpr[31]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r64 = ctx->gpr[64]; r65 = ctx->gpr[65]; r66 = ctx->gpr[66]; r67 = ctx->gpr[67]; r68 = ctx->gpr[68]; r69 = ctx->gpr[69]; r70 = ctx->gpr[70]; r71 = ctx->gpr[71]; r72 = ctx->gpr[72]; r73 = ctx->gpr[73]; r74 = ctx->gpr[74]; r75 = ctx->gpr[75]; r76 = ctx->gpr[76]; r77 = ctx->gpr[77]; r78 = ctx->gpr[78]; r79 = ctx->gpr[79]; r82 = ctx->gpr[82]; r85 = ctx->gpr[85]; r86 = ctx->gpr[86]; r87 = ctx->gpr[87]; r88 = ctx->gpr[88]; r89 = ctx->gpr[89]; r90 = ctx->gpr[90]; r91 = ctx->gpr[91]; r92 = ctx->gpr[92]; r93 = ctx->gpr[93]; r97 = ctx->gpr[97]; r101 = ctx->gpr[101]; r117 = ctx->gpr[117]; r118 = ctx->gpr[118]; r119 = ctx->gpr[119]; r120 = ctx->gpr[120]; r123 = ctx->gpr[123]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r85._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[82] = r82; ctx->gpr[85] = r85; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93; ctx->pc = 0x6020; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006020); }
+         r7 = spu_fm_k(r23, r126, 3);
+         r87 = spu_fm_k(r23, r123, 3);
+         r34 = spu_shufb(r7, r25, r117);
+@@ -2281,7 +2253,6 @@
+         r21 = spu_shufb(r87, r11, r120);
+         ctx->gpr[2] = r2; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[82] = r82; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93;
+         { ctx->pc = 0x5BC8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005BC8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005BC8(spu_context* ctx) {
+@@ -2480,7 +2451,7 @@
+         r23 = spu_shufb(r22, r25, r46);
+         r24 = spu_shufb(r45, r23, r81);
+         spu_ls_write128(ctx, r95._u32[0] + r87._u32[0], r24);
+-        if (r82._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->gpr[83] = r83; ctx->gpr[84] = r84; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[88] = r88; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93; ctx->gpr[97] = r97; ctx->gpr[98] = r98; ctx->gpr[99] = r99; ctx->gpr[108] = r108; ctx->pc = 0x5860; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005860); r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r13 = ctx->gpr[13]; r14 = ctx->gpr[14]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r23 = ctx->gpr[23]; r24 = ctx->gpr[24]; r25 = ctx->gpr[25]; r26 = ctx->gpr[26]; r27 = ctx->gpr[27]; r28 = ctx->gpr[28]; r29 = ctx->gpr[29]; r30 = ctx->gpr[30]; r31 = ctx->gpr[31]; r32 = ctx->gpr[32]; r33 = ctx->gpr[33]; r34 = ctx->gpr[34]; r35 = ctx->gpr[35]; r36 = ctx->gpr[36]; r37 = ctx->gpr[37]; r38 = ctx->gpr[38]; r39 = ctx->gpr[39]; r40 = ctx->gpr[40]; r41 = ctx->gpr[41]; r42 = ctx->gpr[42]; r43 = ctx->gpr[43]; r44 = ctx->gpr[44]; r45 = ctx->gpr[45]; r46 = ctx->gpr[46]; r47 = ctx->gpr[47]; r48 = ctx->gpr[48]; r49 = ctx->gpr[49]; r50 = ctx->gpr[50]; r51 = ctx->gpr[51]; r52 = ctx->gpr[52]; r53 = ctx->gpr[53]; r54 = ctx->gpr[54]; r55 = ctx->gpr[55]; r56 = ctx->gpr[56]; r57 = ctx->gpr[57]; r58 = ctx->gpr[58]; r59 = ctx->gpr[59]; r60 = ctx->gpr[60]; r61 = ctx->gpr[61]; r62 = ctx->gpr[62]; r63 = ctx->gpr[63]; r64 = ctx->gpr[64]; r65 = ctx->gpr[65]; r66 = ctx->gpr[66]; r67 = ctx->gpr[67]; r68 = ctx->gpr[68]; r69 = ctx->gpr[69]; r70 = ctx->gpr[70]; r71 = ctx->gpr[71]; r72 = ctx->gpr[72]; r73 = ctx->gpr[73]; r74 = ctx->gpr[74]; r75 = ctx->gpr[75]; r76 = ctx->gpr[76]; r77 = ctx->gpr[77]; r78 = ctx->gpr[78]; r79 = ctx->gpr[79]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r83 = ctx->gpr[83]; r84 = ctx->gpr[84]; r85 = ctx->gpr[85]; r87 = ctx->gpr[87]; r88 = ctx->gpr[88]; r89 = ctx->gpr[89]; r91 = ctx->gpr[91]; r93 = ctx->gpr[93]; r94 = ctx->gpr[94]; r95 = ctx->gpr[95]; r96 = ctx->gpr[96]; r97 = ctx->gpr[97]; r98 = ctx->gpr[98]; r99 = ctx->gpr[99]; r100 = ctx->gpr[100]; r102 = ctx->gpr[102]; r103 = ctx->gpr[103]; r104 = ctx->gpr[104]; r105 = ctx->gpr[105]; r106 = ctx->gpr[106]; r107 = ctx->gpr[107]; r108 = ctx->gpr[108]; r109 = ctx->gpr[109]; r110 = ctx->gpr[110]; r111 = ctx->gpr[111]; r112 = ctx->gpr[112]; r113 = ctx->gpr[113]; r114 = ctx->gpr[114]; r115 = ctx->gpr[115]; r116 = ctx->gpr[116]; r117 = ctx->gpr[117]; r118 = ctx->gpr[118]; r119 = ctx->gpr[119]; r120 = ctx->gpr[120]; r122 = ctx->gpr[122]; r125 = ctx->gpr[125]; spu_rc_ls = ctx->ls; }
++        if (r82._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->gpr[83] = r83; ctx->gpr[84] = r84; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[88] = r88; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93; ctx->gpr[97] = r97; ctx->gpr[98] = r98; ctx->gpr[99] = r99; ctx->gpr[108] = r108; ctx->pc = 0x5860; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005860); }
+         /* nop */;
+         /* branch hint (ignored) */;
+         r5 = spu_il(0);
+@@ -2489,7 +2460,6 @@
+         /* nop */;
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->gpr[83] = r83; ctx->gpr[84] = r84; ctx->gpr[85] = r85; ctx->gpr[87] = r87; ctx->gpr[88] = r88; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93; ctx->gpr[97] = r97; ctx->gpr[98] = r98; ctx->gpr[99] = r99; ctx->gpr[108] = r108;
+         { ctx->pc = 0x5EE8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005EE8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005EE8(spu_context* ctx) {
+@@ -2512,7 +2482,6 @@
+         r10 = spu_fma_k(r90, r101, r101, 6);
+         ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[10] = r10; ctx->gpr[90] = r90; ctx->gpr[92] = r92; ctx->gpr[99] = r99; ctx->gpr[101] = r101; ctx->gpr[117] = r117; ctx->gpr[118] = r118;
+         { ctx->pc = 0x5F20; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005F20); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00005F20(spu_context* ctx) {
+@@ -2690,7 +2659,6 @@
+         r21 = spu_shufb(r35, r36, r120);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[26] = r26; ctx->gpr[27] = r27; ctx->gpr[28] = r28; ctx->gpr[29] = r29; ctx->gpr[30] = r30; ctx->gpr[31] = r31; ctx->gpr[32] = r32; ctx->gpr[33] = r33; ctx->gpr[34] = r34; ctx->gpr[35] = r35; ctx->gpr[36] = r36; ctx->gpr[37] = r37; ctx->gpr[38] = r38; ctx->gpr[39] = r39; ctx->gpr[40] = r40; ctx->gpr[41] = r41; ctx->gpr[42] = r42; ctx->gpr[43] = r43; ctx->gpr[44] = r44; ctx->gpr[45] = r45; ctx->gpr[46] = r46; ctx->gpr[47] = r47; ctx->gpr[48] = r48; ctx->gpr[49] = r49; ctx->gpr[50] = r50; ctx->gpr[51] = r51; ctx->gpr[52] = r52; ctx->gpr[53] = r53; ctx->gpr[54] = r54; ctx->gpr[55] = r55; ctx->gpr[56] = r56; ctx->gpr[57] = r57; ctx->gpr[58] = r58; ctx->gpr[59] = r59; ctx->gpr[60] = r60; ctx->gpr[61] = r61; ctx->gpr[62] = r62; ctx->gpr[63] = r63; ctx->gpr[64] = r64; ctx->gpr[65] = r65; ctx->gpr[66] = r66; ctx->gpr[67] = r67; ctx->gpr[68] = r68; ctx->gpr[69] = r69; ctx->gpr[70] = r70; ctx->gpr[71] = r71; ctx->gpr[72] = r72; ctx->gpr[73] = r73; ctx->gpr[74] = r74; ctx->gpr[75] = r75; ctx->gpr[76] = r76; ctx->gpr[77] = r77; ctx->gpr[78] = r78; ctx->gpr[79] = r79; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[83] = r83; ctx->gpr[85] = r85; ctx->gpr[89] = r89; ctx->gpr[91] = r91; ctx->gpr[93] = r93;
+         { ctx->pc = 0x5BC8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00005BC8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000061B0(spu_context* ctx) {
+@@ -2712,7 +2680,6 @@
+         r1 = spu_ai(r1, -80);
+         ctx->gpr[1] = r1; ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[8] = r8; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82;
+         { ctx->pc = 0x61E8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000061E8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000061E8(spu_context* ctx) {
+@@ -2742,7 +2709,6 @@
+         spu_ls_write128(ctx, r80._u32[0] + 0x30, r4);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14;
+         { ctx->pc = 0x623C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_0000623C); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_0000623C(spu_context* ctx) {
+@@ -2765,10 +2731,9 @@
+         r17 = spu_rotqbyi(r18, 13);
+         r9 = spu_ceqbi(r17, 0);
+         r7 = spu_xsbh(r9);
+-        if (r7._u16[0] == 0) { ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->pc = 0x6290; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006290); r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r9 = ctx->gpr[9]; r15 = ctx->gpr[15]; r16 = ctx->gpr[16]; r17 = ctx->gpr[17]; r18 = ctx->gpr[18]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; spu_rc_ls = ctx->ls; }
++        if (r7._u16[0] == 0) { ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->pc = 0x6290; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006290); }
+         ctx->gpr[7] = r7; ctx->gpr[9] = r9; ctx->gpr[17] = r17; ctx->gpr[18] = r18;
+         { ctx->pc = 0x6278; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006278); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006278(spu_context* ctx) {
+@@ -2801,7 +2766,7 @@
+         r20 = spu_ceqbi(r21, 0);
+         r19 = spu_xsbh(r20);
+         /* nop */;
+-        if (r19._u16[0] != 0) { ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->pc = 0x62E8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000062E8); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r19 = ctx->gpr[19]; r20 = ctx->gpr[20]; r21 = ctx->gpr[21]; r22 = ctx->gpr[22]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; spu_rc_ls = ctx->ls; }
++        if (r19._u16[0] != 0) { ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->pc = 0x62E8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000062E8); }
+         r1 = spu_ai(r1, 80);
+         r3 = spu_shlqbyi(r81, 0);
+         r4 = spu_ori(r80, 0);
+@@ -2811,7 +2776,6 @@
+         r82 = spu_ls_read128(ctx, r1._u32[0] + -0x30);
+         ctx->gpr[0] = r0; ctx->gpr[1] = r1; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82;
+         { ctx->pc = 0x53B8; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000053B8); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000062E8(spu_context* ctx) {
+@@ -2831,7 +2795,6 @@
+         spu_ls_write128(ctx, r80._u32[0] + 0xF0, r24);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[23] = r23; ctx->gpr[24] = r24; ctx->gpr[25] = r25; ctx->gpr[26] = r26; ctx->gpr[27] = r27;
+         { ctx->pc = 0x6278; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006278); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006318(spu_context* ctx) {
+@@ -2858,7 +2821,7 @@
+         r8 = spu_ai(r4, 4);
+         /* nop */;
+         r5 = spu_ai(r4, 16);
+-        if (r3._u16[0] != 0) { ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->pc = 0x6388; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006388); r0 = ctx->gpr[0]; r1 = ctx->gpr[1]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r11 = ctx->gpr[11]; r12 = ctx->gpr[12]; r80 = ctx->gpr[80]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; spu_rc_ls = ctx->ls; }
++        if (r3._u16[0] != 0) { ctx->gpr[1] = r1; ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[5] = r5; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[81] = r81; ctx->gpr[82] = r82; ctx->pc = 0x6388; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006388); }
+         r1 = spu_ai(r1, 80);
+         r0 = spu_ls_read128(ctx, r1._u32[0] + 0x10);
+         r80 = spu_ls_read128(ctx, r1._u32[0] + -0x10);
+@@ -2900,7 +2863,6 @@
+         r81 = spu_ls_read128(ctx, r1._u32[0] + -0x20);
+         ctx->gpr[0] = r0; ctx->gpr[1] = r1; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[13] = r13; ctx->gpr[14] = r14; ctx->gpr[80] = r80; ctx->gpr[81] = r81; ctx->gpr[82] = r82;
+         { ctx->pc = 0x63F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000063F0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000063F0(spu_context* ctx) {
+@@ -3040,7 +3002,6 @@
+         r4 = spu_ila(0xFFFF);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4;
+         { ctx->pc = 0x6418; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006418); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000065A0(spu_context* ctx) {
+@@ -3151,7 +3112,6 @@
+         r4 = spu_ila(0xFFFF);
+         ctx->gpr[3] = r3; ctx->gpr[4] = r4;
+         { ctx->pc = 0x65A0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000065A0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006728(spu_context* ctx) {
+@@ -3174,9 +3134,7 @@
+         r2 = spu_ila(0x6760);
+         ctx->gpr[2] = r2; ctx->gpr[5] = r5;
+         ctx->gpr[126] = spu_link(0x6760); { ctx->pc = 0x6760; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006760); }
+-        spu_rc_ls = ctx->ls;
+         { ctx->pc = 0x6760; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006760); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006760(spu_context* ctx) {
+@@ -3186,10 +3144,9 @@
+         r3 = spu_ila(0x6BE0);
+         r4 = spu_ila(0x6F80);
+         r2 = spu_clgt(r4, r3);
+-        if (r2._u32[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[126] = r126; ctx->pc = 0x6814; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006814); r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r2._u32[0] != 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[126] = r126; ctx->pc = 0x6814; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006814); }
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[126] = r126;
+         { ctx->pc = 0x6774; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006774); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006774(spu_context* ctx) {
+@@ -3200,10 +3157,9 @@
+         r7 = spu_ls_read128(ctx, r80._u32[0] + 0x0);
+         r3 = spu_rotqby(r7, r80);
+         r2 = spu_ceqi(r3, -1);
+-        if (r2._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[7] = r7; ctx->gpr[80] = r80; ctx->pc = 0x6830; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006830); r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r7 = ctx->gpr[7]; r80 = ctx->gpr[80]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r2._u32[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[7] = r7; ctx->gpr[80] = r80; ctx->pc = 0x6830; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006830); }
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[7] = r7; ctx->gpr[80] = r80;
+         { ctx->pc = 0x678C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_0000678C); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_0000678C(spu_context* ctx) {
+@@ -3226,7 +3182,7 @@
+         r82 = spu_sf(r79, r82);
+         r0 = spu_ila(0x67D4);
+         r0 = spu_a(r0, r126);
+-        if (r81._u32[0] == 0) { ctx->gpr[0] = r0; ctx->gpr[82] = r82; ctx->pc = 0x4388; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004388); r0 = ctx->gpr[0]; r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; r9 = ctx->gpr[9]; r10 = ctx->gpr[10]; r79 = ctx->gpr[79]; r81 = ctx->gpr[81]; r82 = ctx->gpr[82]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r81._u32[0] == 0) { ctx->gpr[0] = r0; ctx->gpr[82] = r82; ctx->pc = 0x4388; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00004388); }
+         ctx->gpr[0] = r0; ctx->gpr[82] = r82;
+         ctx->stop_code = 0u; ctx->status = SPU_STATUS_STOPPED_BY_STOP; spu_stop(ctx); return;
+ }
+@@ -3240,10 +3196,9 @@
+         r80 = spu_a(r80, r126);
+         r3 = spu_ls_read128(ctx, r80._u32[0] + 0x0);
+         r3 = spu_rotqby(r3, r80);
+-        if (r3._u32[0] != 0) { ctx->gpr[3] = r3; ctx->gpr[80] = r80; ctx->pc = 0x6850; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006850); r3 = ctx->gpr[3]; r80 = ctx->gpr[80]; r126 = ctx->gpr[126]; spu_rc_ls = ctx->ls; }
++        if (r3._u32[0] != 0) { ctx->gpr[3] = r3; ctx->gpr[80] = r80; ctx->pc = 0x6850; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006850); }
+         ctx->gpr[3] = r3; ctx->gpr[80] = r80;
+         { ctx->pc = 0x67EC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000067EC); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000067EC(spu_context* ctx) {
+@@ -3270,7 +3225,6 @@
+         r5 = spu_il(0);
+         ctx->gpr[5] = r5;
+         { ctx->pc = 0x681C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_0000681C); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_0000681C(spu_context* ctx) {
+@@ -3283,7 +3237,6 @@
+         if (r6._u32[0] != 0) goto loc_0000681C;
+         ctx->gpr[3] = r3; ctx->gpr[6] = r6;
+         { ctx->pc = 0x6774; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006774); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006830(spu_context* ctx) {
+@@ -3301,7 +3254,6 @@
+         if (r2._u32[0] == 0) goto loc_00006830;
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[7] = r7;
+         { ctx->pc = 0x678C; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_0000678C); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006850(spu_context* ctx) {
+@@ -3318,7 +3270,6 @@
+         if (r3._u32[0] != 0) goto loc_00006850;
+         ctx->gpr[3] = r3; ctx->gpr[80] = r80;
+         { ctx->pc = 0x67EC; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000067EC); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006870(spu_context* ctx) {
+@@ -3329,7 +3280,7 @@
+         r4 = spu_rotqbyi(r5, 13);
+         r3 = spu_ceqbi(r4, 0);
+         r2 = spu_xsbh(r3);
+-        if (r2._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->pc = 0x69B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000069B0); r2 = ctx->gpr[2]; r3 = ctx->gpr[3]; r4 = ctx->gpr[4]; r5 = ctx->gpr[5]; r6 = ctx->gpr[6]; r7 = ctx->gpr[7]; r8 = ctx->gpr[8]; spu_rc_ls = ctx->ls; }
++        if (r2._u16[0] == 0) { ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->pc = 0x69B0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000069B0); }
+         r7 = spu_ilhu(0x19);
+         r4 = spu_ls_read128(ctx, 0x6AA0);
+         r8 = spu_ilhu(0x3C6E);
+@@ -3338,7 +3289,6 @@
+         r8 = spu_iohl(r8, 0xF35F);
+         ctx->gpr[2] = r2; ctx->gpr[3] = r3; ctx->gpr[4] = r4; ctx->gpr[5] = r5; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8;
+         { ctx->pc = 0x68A0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000068A0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000068A0(spu_context* ctx) {
+@@ -3367,7 +3317,6 @@
+         r11 = spu_ai(r12, 128);
+         ctx->gpr[4] = r4; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[9] = r9; ctx->gpr[10] = r10; ctx->gpr[11] = r11; ctx->gpr[12] = r12; ctx->gpr[13] = r13; ctx->gpr[14] = r14;
+         { ctx->pc = 0x68F0; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_000068F0); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_000068F0(spu_context* ctx) {
+@@ -3398,7 +3347,6 @@
+         spu_ls_write128(ctx, 0x6EF0, r8);
+         ctx->gpr[2] = r2; ctx->gpr[6] = r6; ctx->gpr[7] = r7; ctx->gpr[8] = r8; ctx->gpr[15] = r15; ctx->gpr[16] = r16; ctx->gpr[17] = r17; ctx->gpr[18] = r18; ctx->gpr[19] = r19; ctx->gpr[20] = r20; ctx->gpr[21] = r21; ctx->gpr[22] = r22; ctx->gpr[23] = r23; ctx->gpr[24] = r24;
+         { ctx->pc = 0x6948; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006948); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006948(spu_context* ctx) {
+@@ -3441,7 +3389,6 @@
+         r2 = spu_ls_read128(ctx, 0x6EF0);
+         ctx->gpr[2] = r2; ctx->gpr[7] = r7; ctx->gpr[12] = r12;
+         { ctx->pc = 0x6948; SPU_XFER(ctx, jobmod_cdea34a3d08b_e2728_rc_spu_func_00006948); }
+-        spu_rc_ls = ctx->ls;
+ }
+ 
+ void jobmod_cdea34a3d08b_e2728_rc_spu_func_00006BAC(spu_context* ctx) {

@@ -1,0 +1,10 @@
+* text=auto
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+# Applied to the generated files byte for byte: keep them exactly as written
+installer/patches/** -text
+installer/generated.lock -text
+*.profdata binary
+*.png binary
+*.ico binary

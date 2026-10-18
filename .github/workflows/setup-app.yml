@@ -1,0 +1,41 @@
+name: Setup app
+
+on:
+  push:
+    paths:
+      - "installer/**"
+      - ".github/workflows/setup-app.yml"
+  pull_request:
+    paths:
+      - "installer/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build (Windows)
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: installer
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+        with:
+          components: rustfmt
+          cache-workspaces: installer
+
+      - name: Check formatting
+        run: cargo fmt --check
+
+      - name: Build
+        run: cargo build --release --locked
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: infamous-installer
+          path: |
+            installer/target/release/infamous-installer.exe
+            installer/target/release/infamous-setup.exe
+            installer/target/release/infamous-launch.exe
+          if-no-files-found: error

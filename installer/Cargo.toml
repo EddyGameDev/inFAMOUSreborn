@@ -1,0 +1,43 @@
+[package]
+name = "infamous-installer"
+version = "0.2.0"
+edition = "2021"
+description = "Builds the inFamous (BCES00220) PC recompilation from the user's own game files"
+license = "MIT"
+default-run = "infamous-installer"
+
+[lib]
+name = "infamous_installer"
+path = "src/lib.rs"
+
+# Command-line installer (maintainer tools, and what the setup program runs).
+[[bin]]
+name = "infamous-installer"
+path = "src/main.rs"
+
+# inFamous.exe: starts the built game without a console window.
+[[bin]]
+name = "infamous-launch"
+path = "src/bin/infamous-launch.rs"
+
+# inFamous Setup: the point-and-click installer (`infamous-installer package` appends the port).
+[[bin]]
+name = "infamous-setup"
+path = "src/bin/infamous-setup.rs"
+required-features = ["gui"]
+
+[features]
+default = ["gui"]
+gui = ["dep:eframe", "dep:rfd"]
+
+# Only the setup window has dependencies. Everything that touches the game files (ISO reading,
+# decryption, patching, hashing) is in this crate with no third-party code.
+[dependencies]
+eframe = { version = "0.29", optional = true }
+rfd = { version = "0.15", optional = true }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = true

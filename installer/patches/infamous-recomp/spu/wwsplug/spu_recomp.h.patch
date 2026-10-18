@@ -1,0 +1,19 @@
+# eol lf
+--- a/infamous-recomp/spu/wwsplug/spu_recomp.h
++++ b/infamous-recomp/spu/wwsplug/spu_recomp.h
+@@ -65,6 +65,15 @@
+ #define SPU_PLUG_TLS _Thread_local
+ #endif
+ extern SPU_PLUG_TLS uint32_t g_spu_frag_delta;   /* runtime LS base of the blob being run */
++/* v156 SPU_PLUG_XFER (default 1; 0 = v155 behaviour): static cross-function branches inside the lifted WWS
++ * plugins (744 sites per copy) take the v153 direct tail transfer (SPU_XFER, spu_context.h) instead of
++ * returning to the drain loop for every hop. SPU_XFER itself still falls back to the trampoline whenever the
++ * drain loop would do something special (pending SPU interrupt, lockstep, diagnostic hook, SPU_TAILRET,
++ * SPU_DIRECT_TAIL=0). g_spu_frag_delta is set before the transfer, exactly as before. Initialised by
++ * spu_plug_lookup (every plugin entry goes through it); -1 = not yet -> trampoline. */
++extern int g_spu_plug_xfer;
++#define SPU_PLUG_XFER(ctx, F) do { if (__builtin_expect(g_spu_plug_xfer > 0, 1)) SPU_XFER(ctx, F); \
++                                   g_spu_trampoline_fn = (F); return; } while (0)
+ typedef void (*spu_plug_fn)(spu_context*);
+ spu_plug_fn spu_plug_lookup(spu_context* ctx, uint32_t pc);
+ void wwsplug00_spu_func_00000030(spu_context* ctx);

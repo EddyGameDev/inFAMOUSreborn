@@ -1,0 +1,3 @@
+# eol lf
+--- a/infamous-recomp/spu/jobmods_register.c
++++ b/infamous-recomp/spu/jobmods_register.c

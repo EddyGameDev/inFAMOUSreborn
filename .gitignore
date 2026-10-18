@@ -1,0 +1,53 @@
+/build/
+/dist/
+installer/target/
+.installer/
+Play inFamous.cmd
+inFamous.exe
+
+# Game data must never be committed
+/Infamous (Europe) (Fr,De,Es,It,Nl)
+PS3_GAME/
+*.iso
+*.dkey
+EBOOT.BIN
+EBOOT.elf
+*.psarc
+*.psarc_s
+*.xpp
+*.sfo
+*.SFO
+BCES00220_guest_memory_*/
+
+# Regenerated from the player's own game by the installer
+infamous-recomp/recompiled/
+infamous-recomp/spu-images/
+infamous-recomp/assets/
+infamous-recomp/spu/**
+!infamous-recomp/spu/jobmods_extra_map.json
+!infamous-recomp/spu/jobmod_50f371dc382d_e3D90/
+infamous-recomp/spu/jobmod_50f371dc382d_e3D90/**
+!infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v231.h
+!infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v233.h
+
+# Build output, run output and caches
+infamous-recomp/build/
+infamous-recomp/build-*/
+infamous-recomp/out/
+infamous-recomp/pgo/
+infamous-recomp/memdump/
+infamous-recomp/shadercache/
+infamous-recomp/gamedata/
+infamous-recomp/settings.ini
+*.log
+*.out.log
+*.err.log
+*.profraw
+*.pdb
+*.ilk
+*.obj
+*.exe
+__pycache__/
+*.pyc
+*.pre_*
+*.bak

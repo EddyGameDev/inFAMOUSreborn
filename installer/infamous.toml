@@ -1,0 +1,302 @@
+# infamous-installer manifest
+#
+# Everything the installer knows about the game and the port is here. Paths are relative to the
+# checkout root (the folder that holds `installer/`, `infamous-recomp/` and `ps3recomp/`).
+#
+# Placeholders available in steps and build commands:
+#   {root} {port} {toolkit}   the checkout, infamous-recomp/, ps3recomp/
+#   {game} {usrdir} {elf}     the player's dump, its PS3_GAME/USRDIR, the decrypted EBOOT.elf
+#   {python}                  the installer's private venv Python (requirements installed)
+#   {work}                    scratch space: <root>/.installer/work
+#   {jobs}                    worker processes for the lifters
+#   {file}                    the current match of a step's `for_each`
+#   build only: {cmake} {ninja} {cc} {cxx} {build_jobs}
+#
+# Workflow
+#   maintainer:  infamous-installer make-patches --game <dump>   -> installer/generated.lock + installer/patches/
+#                infamous-installer export --out <dir>           -> the tree to publish
+#   player:      infamous-installer   (double-click)             -> regenerate, patch, build, "Play inFamous.cmd"
+
+[game]
+title = "inFamous"
+title_ids = ["BCES00220"]
+# sha256 of the decrypted PS3_GAME/USRDIR/EBOOT.elf the port was built from (European disc).
+eboot_sha256 = ["095d851432f3b55179cd725b46838ffedb3e5eb9f73889e52b6f11f3d3f494fd"]
+# The port's tools (and run.cmd) look for the game at ../<this name>. The installer links the
+# player's dump there (a directory junction on Windows), wherever it really is.
+link_name = "Infamous (Europe) (Fr,De,Es,It,Nl)"
+
+[layout]
+port = "infamous-recomp"
+toolkit = "ps3recomp"
+
+[python]
+min_version = "3.10"
+requirements = ["ps3recomp/requirements.txt"]
+# Used by the asset tools in infamous-recomp/tools.
+packages = ["numpy", "Pillow"]
+
+# Files produced from the game. They are never published; the pipeline below regenerates them
+# on the player's machine and installer/patches/ turns them into the port's maintained versions.
+[generated]
+include = [
+  "infamous-recomp/recompiled/",
+  "infamous-recomp/spu/",
+  "infamous-recomp/spu-images/",
+  "infamous-recomp/assets/ui_font.bin",
+  "infamous-recomp/assets/ui_font_preview.png",
+  "infamous-recomp/assets/kbm_icons.bin",
+  "infamous-recomp/assets/kbm_prompts.bin",
+  "infamous-recomp/assets/font_icons_l0.bin",
+]
+exclude = [
+  "**/*.pre_ibf",
+  "**/*.pre_v200",
+  "**/*.pre_*",
+  "**/*.bak",
+  # hand-written: the extra job-module entry points found with SPU_MISS_STATS
+  "infamous-recomp/spu/jobmods_extra_map.json",
+  # hand-written LOD hooks included by the lifted job module sources
+  "infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v231.h",
+  "infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v233.h",
+]
+# Generated files whose bytes depend on the machine (drawn with the system's fonts and Pillow).
+# They are not in the patch set and not hash-checked; each player keeps what their pipeline made.
+loose = [
+  "infamous-recomp/assets/ui_font_preview.png",
+  "infamous-recomp/assets/font_icons_l0.bin",
+  "infamous-recomp/assets/kbm_icons.bin",
+  "infamous-recomp/assets/kbm_prompts.bin",
+]
+# Small files whose patch may legitimately replace most of the content (no game code in them).
+full_patch_ok = [
+  "infamous-recomp/spu-images/pm_wwsjob.functions.json",   # same boundaries, different JSON indent
+]
+
+# ---------------------------------------------------------------------------------------------
+# The pipeline. Steps run in order from the checkout root; a finished step is not re-run for the
+# same EBOOT unless --regen is given. `optional` steps may fail (their features stay off).
+# ---------------------------------------------------------------------------------------------
+
+[[step]]
+id = "ppu-loader"
+title = "Read the PPU executable (functions, TOC, firmware imports)"
+run = ["{python}", "{toolkit}/tools/ppu_loader.py", "{elf}", "--output", "{work}/ppu"]
+
+[[step]]
+id = "ppu-lift"
+title = "Lift the PPU code to C++ (the long one)"
+run = ["{python}", "{toolkit}/tools/ppu_lifter.py", "{elf}",
+       "--functions", "{work}/ppu/EBOOT.functions.json",
+       "--hle-stubs", "{work}/ppu/EBOOT.imports.json",
+       "--output", "{port}/recompiled",
+       "--jobs", "{jobs}"]
+outputs = ["infamous-recomp/recompiled/**"]
+
+[[step]]
+id = "spu-images"
+title = "Extract the embedded SPU programs"
+run = ["{python}", "{toolkit}/tools/extract_spu_images.py", "{elf}", "--output", "{port}/spu-images"]
+
+# The WWS job manager policy module: 0x2D80 bytes at file offset 0x68CD80 of this EBOOT, loaded
+# at LS 0xA00 with its entry at 0x2BF0. (Verified byte-identical to the port's pm_wwsjob.raw/.elf.)
+[[step]]
+id = "pm-carve"
+title = "Extract the WWS job manager policy module"
+builtin = "carve"
+args = ["{elf}", "0x68CD80", "0x2D80", "{port}/spu-images/pm_wwsjob.raw"]
+
+[[step]]
+id = "pm-wrap"
+title = "Wrap the policy module as an SPU ELF"
+run = ["{python}", "{toolkit}/tools/wrap_spu_elf.py", "{port}/spu-images/pm_wwsjob.raw",
+       "--base", "0xA00", "--entry", "0x2BF0", "--out", "{port}/spu-images/pm_wwsjob.elf"]
+
+[[step]]
+id = "pm-functions"
+title = "Find the policy module's functions"
+run = ["{python}", "{toolkit}/tools/find_spu_functions.py", "{port}/spu-images/pm_wwsjob.elf",
+       "--out", "{port}/spu-images/pm_wwsjob.functions.json"]
+
+[[step]]
+id = "spu-lift"
+title = "Lift the SPU programs and generate their registration table"
+run = ["{python}", "{toolkit}/tools/build_spu_workloads.py",
+       "--images", "{port}/spu-images", "--lifted", "{port}/spu",
+       "--out", "{port}/spu/spu_workloads.c",
+       "--register-fn", "infamous_spu_register_all", "--title", "inFamous"]
+
+[[step]]
+id = "jobmods-extract"
+title = "Extract the 21 WWS job modules"
+builtin = "extract-jobmods"
+args = ["{elf}", "{port}/spu/jobmods"]
+
+[[step]]
+id = "jobmods-lift"
+title = "Lift the WWS job modules"
+run = ["{python}", "{toolkit}/tools/lift_jobmods.py",
+       "--jobmods", "{port}/spu/jobmods", "--out", "{port}/spu",
+       "--register", "{port}/spu/jobmods_register.c", "--symbol-prefix", "infamous"]
+env = { JOBMOD_EXTRA_MAP = "{port}/spu/jobmods_extra_map.json" }
+
+[[step]]
+id = "spu-regcache"
+title = "Register-cached twins of the lifted SPU code"
+run = ["{python}", "{toolkit}/tools/spu_regcache.py", "{port}/spu"]
+
+[[step]]
+id = "wwsplug"
+title = "Lift the WWS plugin blobs"
+# After spu-regcache: plug_lift writes its own spu_recomp_rc.c, and spu_regcache.py rejects this
+# folder (its functions do not share one symbol prefix).
+run = ["{python}", "{toolkit}/tools/plug_lift.py", "{elf}", "{port}/spu/wwsplug", "{toolkit}/tools/plug_obs.json"]
+
+[[step]]
+id = "spu-ibfast"
+title = "In-module indirect branch fast paths (WWS job modules)"
+run = ["{python}", "{toolkit}/tools/spu_ibfast.py", "{port}/spu"]
+
+[[step]]
+id = "spu-v200-jobmods"
+title = "v200 loop-back / float passes (job modules)"
+for_each = "{port}/spu/jobmod_*/spu_recomp_rc.c"
+run = ["{python}", "{toolkit}/tools/spu_v200.py", "{file}"]
+
+[[step]]
+id = "spu-v200-wwsplug"
+title = "v200 loop-back / float passes (plugins)"
+run = ["{python}", "{toolkit}/tools/spu_v200.py", "{port}/spu/wwsplug/spu_recomp_rc.c"]
+
+# ---- assets from the game data (cosmetic: the port runs without them) ----
+
+[[step]]
+id = "ui-font"
+title = "In-game dialog font"
+cwd = "{port}"
+run = ["{python}", "tools/extract_ui_font.py", "english"]
+optional = true
+outputs = ["infamous-recomp/assets/ui_font.bin", "infamous-recomp/assets/ui_font_preview.png"]
+
+[[step]]
+id = "kbm-icons"
+title = "Keyboard/mouse prompt glyphs"
+note = "Draws with DejaVu Sans Bold if installed, else Arial Bold; set KBM_FONT=<file.ttf> to choose another."
+cwd = "{port}"
+mkdirs = ["{port}/assets"]
+run = ["{python}", "tools/dump_icon_tex.py"]
+optional = true
+outputs = ["infamous-recomp/assets/kbm_icons.bin"]
+
+[[step]]
+id = "kbm-icons-build"
+title = "Keyboard/mouse prompt atlas"
+cwd = "{port}/tools"
+run = ["{python}", "make_kbm_icons.py"]
+optional = true
+outputs = ["infamous-recomp/assets/kbm_icons.bin"]
+
+[[step]]
+id = "kbm-prompts-xpp"
+title = "HUD prompt textures: unpack core.xpp"
+run = ["{python}", "{port}/tools/psarc.py", "{usrdir}/cache/psarc/install1/infamous1.psarc_s", "extract", "core.xpp", "{work}/xpp"]
+optional = true
+outputs = ["infamous-recomp/assets/kbm_prompts.bin"]
+
+[[step]]
+id = "kbm-prompts"
+title = "HUD prompt textures: keyboard/mouse versions"
+cwd = "{port}/tools"
+run = ["{python}", "make_kbm_prompts.py", "{work}/xpp/core.xpp", "{port}/assets/kbm_prompts.bin"]
+optional = true
+outputs = ["infamous-recomp/assets/kbm_prompts.bin"]
+
+# ---------------------------------------------------------------------------------------------
+# Build (same settings as infamous-recomp/build.cmd, but in its own build-install folder so an
+# install never reconfigures or overwrites a developer's build-fast / build-pgo trees)
+# ---------------------------------------------------------------------------------------------
+
+[build]
+configure = ["{cmake}", "-S", "{port}", "-B", "{port}/build-install", "-G", "Ninja",
+             "-DCMAKE_MAKE_PROGRAM={ninja}",
+             "-DCMAKE_C_COMPILER={cc}", "-DCMAKE_CXX_COMPILER={cxx}",
+             "-DCMAKE_BUILD_TYPE=Release",
+             "-DPORT_PPU_REGCACHE=ON",
+             "-DPORT_PGO=USE", "-DPORT_PGO_PROFILE={installer}/pgo/infamous.profdata",
+             "-DPS3RECOMP_DIR={toolkit}",
+             "-DPython3_EXECUTABLE={python}"]
+compile = ["{cmake}", "--build", "{port}/build-install", "--parallel", "{build_jobs}"]
+exe = "{port}/build-install/inFamousRecomp.exe"
+log = "{port}/build-install.log"
+# Linux / macOS (null or Metal backend; for development).
+configure_unix = ["{cmake}", "-S", "{port}", "-B", "{port}/build-install", "-G", "Ninja",
+                  "-DCMAKE_MAKE_PROGRAM={ninja}",
+                  "-DCMAKE_C_COMPILER={cc}", "-DCMAKE_CXX_COMPILER={cxx}",
+                  "-DCMAKE_BUILD_TYPE=Release",
+                  "-DPORT_PPU_REGCACHE=ON",
+                  "-DPS3RECOMP_DIR={toolkit}",
+                  "-DPython3_EXECUTABLE={python}"]
+compile_unix = ["{cmake}", "--build", "{port}/build-install", "--parallel", "{build_jobs}"]
+exe_unix = "{port}/build-install/inFamousRecomp"
+
+# The launcher the installer writes next to the checkout (switches from infamous-recomp/fast.cmd).
+[launch]
+name = "Play inFamous"
+cwd = "{port}"
+stdout = "play.out.log"
+stderr = "play.err.log"
+# The in-game Settings menu (F10, settings.ini) still overrides vsync, frame cap, resolution etc.
+env = { RD_SPU_INTERP = "1", INFAMOUS_BINK_COMPLETION = "1", PS3_VERBOSE = "0", MSGDIALOG_NATIVE = "1", SAVEDATA_NATIVE_UI = "1", PS3_FAST_HOST = "1", PS3_FAST_RUNTIME = "1", PS3_PCORE = "1", PS3_SPURS_PCORE = "1", SPURS_PAR_SPUS = "0", SPURS_LANE_OVERCOMMIT = "1", SPURS_SEQ_LANES = "1", SPURS_PAR_LANES = "0,1,2,5,6,7,8,9,10,11,12,13,14", SPURS_WKL_SOLO = "0,4,8,9", SPURS_PAR_KICK = "1", SPURS_SPIN_US = "500", SPURS_IDLE_WAIT_US = "250", PS3_SHORT_SLEEP_SPIN = "0", VTX_ASYNC = "3", VTX_ASYNC_MIN = "64", RF_ASYNC = "1", VCACHE = "1", SRV_ALIAS = "1", FP_BINDING_META = "1", SHADOWS = "1", SHADOW_LIT = "0", SHADOW_SKIP = "0", PERF = "0", SPURS_PMTIME = "0", AUDIO_RATE = "1", AUDIO_AHEAD_BLOCKS = "16", AUDIO_PREPAD = "16", AUDIO_ELASTIC_US = "80000", SPURS_KICK = "0", TASKWAIT_BOOST = "0", SPU_REGCACHE = "1", GCM_REF_GAP_AB_US = "200", PS3_MAIN_CORE = "1", PS3_FIFO_CORE = "1", ANIM_LOD = "0", ANIM_LOD_MAX = "0x70", SPU_DMA_FAST = "1", ACCUM_FLIP_MAX = "8", FRAME_SPLIT = "1", FRAME_STALL_MS = "250", FRAME_STALL_FLIPS = "3", FRAMESIG = "0", BLACK_PROBE = "0", BLACK_CAP = "0", VRAM_DMA_LOG = "0", LWCOND_PER_OBJ = "1", LWCOND_AB = "8", SPURS_WKL_LIFECYCLE = "1", SPURS_WKL_ADD_FRESH = "1", PS3_AB_N = "2", SPURS_LANE_SPIN_US = "200", PS3_ICALL_FAST = "1", PS3_LWM_FAST = "1", PS3_HLE_CACHE = "1", SPURS_SOLO_AB = "8,9", SPURS_LANE_CHAIN = "1", SPURS_LANE_CHAIN_US = "2000", SPURS_PCORE_WIDS = "1,6", SPU_INTERP_FAST = "1", SPU_WRCH_FAST = "1", LANEPROF_SAMPLE = "8", PS3_LWM_FAIR = "1", FREEZE_DUMP = "0", AUDIO_THREAD_BOOST = "1", AUDIO_HOLE_DUMPS = "0", AUDIO_SENTINEL = "1", AUDIO_STALL_MAX = "24", AUDIO_PLC = "1", AUDIO_PLC_MODE = "3", AUDIO_STRETCH = "0", AUDIO_STRETCH_MAX = "1.5", TEX_MIPS = "1", LOD_SKY_ONLY = "2", SHADOW_RP = "1", INFAMOUS_SIM_TRACE = "0", SPU_TASK_STATS = "0", FIOS_TRACE = "0", SPU_TASK_PCORE = "0", SPU_TASK_FASTWAKE = "1", SPURS_EF_SPIN_US = "500", SPURS_INST1_PCORE = "1", SPURS_INST1_HOT = "1", PS3_AUDIO_CORE = "1", FRAMEREC = "0", FS_READ_DELAY_MS = "0", SPU_TASK_HOT_US = "0", FIOSREQ = "0", FIOS_HLE = "1", ICALLTL = "0", SPURS_STALL_MODE = "4", SPURS_STALL_HARD_MS = "10000", SPU_LL_SLEEP_MS = "4", SPURS_PCORE_WIDS_B = "-", SPURS_PCORE_B_PHASE = "99", PCORE_UNPIN_PHASE = "99", TASKWAIT_W16_WID = "2", SPURS_HOT_WIDS = "2,6,9", SPURS_HOT_POLL_US = "40", PAD_KBM = "1", PAD_MOUSE_SENS = "6", PAD_MOUSE_DIRECT = "1", PAD_MOUSE_SPEED = "450", PAD_MOUSE_MAX = "8", CELL_PROBE = "0", PAD_MOUSE_LINEAR = "1", PAD_MOUSE_NOSPRING = "1", PAD_MOUSE_RAWTURN = "1", PAD_RAWINPUT = "1", SPU_DIRECT_TAIL = "1", RES_SCALE = "3", SAMP_BORDER = "1", INFAMOUS_FPS_CAP_KEY = "1", LWCOND_SITE_POLL = "524824:16", SPU_FAST_HALT = "1", SPU_FAST_IRQJMP = "1", SPU_IB_FAST = "1", SPU_DRAIN_FASTRET = "1", SPU_OVL_FILTER = "1", SPU_PLUG_XFER = "1", SPU_PLUG_MEMO = "1", ZCONV_STENCIL = "1", SAMP_PACK = "1", FEEDBACK_RUN = "1000", FEEDBACK_RUN_ANYFP = "1", GCM_PUMP_EARLY = "1", LOD_SKY_START_OFF = "1", LOD_DIST_SCALE = "1", PS3_TELEM = "0", PS3_PROF_MAIN = "0", PS3_PROF_MAIN_ONLY = "0", LANEPROF = "0", LANECONC = "0", PAD_MOUSE_DIAG = "0", GPUPROF = "0", BJDIAG = "0", PS3_AB_SEC = "30", PS3_AB = "0", BJDUMP = "0", HLESTAT = "0", PRESENT_VSYNC = "0", UI_FPS_CAP = "0", TASKWAIT_EVENT = "0", TASKWAIT_ADAPT = "0", TEX_COLD_REUSE = "1", TEX_ASSOC = "1", TEX_CSUM_MLP = "1", FLIP_FIFO_BOUNDARY = "1", ADAPT_LOD = "1", LOD_SHADOW_ORIG = "1", SHC_PACK = "1", PSO_LIB = "1", SRV_ALIAS_ASSOC = "1", SRV_ALIAS_ASSOC_BIT = "0", GCM_FIFO_DIRECT = "1", GCM_INDEX_SETUP = "1", PS3_AB_SEQ = "0,0", RF_CORE = "1", V221A_PLACE = "1", LOD_CLASS_SCALE = "1.5", PAD_MOUSE_LSTICK = "1", PAD_MOUSE_LSTICK_GAIN = "1.0", GLASS_NEEDS_BACKING = "2", FPR_FAST = "1", TC_VEC = "1", IDX_PF = "1" }
+
+# ---------------------------------------------------------------------------------------------
+# export: what is copied into the tree you publish. [generated] files are always left out.
+# ---------------------------------------------------------------------------------------------
+
+[export]
+exclude = [
+  # the game itself, and dumps of its memory
+  "Infamous (Europe) (Fr,De,Es,It,Nl)/",
+  "BCES00220_guest_memory_*/",
+  "infamous-recomp/memdump/",
+  "infamous-recomp/recomp_spu_ls.bin",
+  "infamous-recomp/_assets/",
+  "infamous-recomp/tools/fn/",              # single lifted functions pulled out for study
+  "infamous-recomp/gamedata/",
+  "infamous-recomp/shadercache/",
+  "infamous-recomp/rsxcap/",
+  "infamous-recomp/frames/",
+  "infamous-recomp/frags/",
+  "infamous-recomp/spu/**",
+  # backups, transfers, audits, third-party binaries
+  "_xfer/", "_to_delete/", "_audit_*/", "github/",
+  "infamous-recomp/_bench/",                # bench runner jobs, logs, screenshots and SAVE GAMES
+  "infamous-recomp/_xfer/", "infamous-recomp/_xfer_v144/",
+  "tools/rpcs3/", "tools/rpcs3.7z",
+  # build output and run artefacts
+  "infamous-recomp/build/", "infamous-recomp/build-*/", "ps3recomp/build/", "ps3recomp/build-*/",
+  "infamous-recomp/out/", "infamous-recomp/pgo/",
+  "**/*.log", "**/*.map", "**/*.bmp", "**/*.profraw", "**/*.profdata",
+  "**/*.obj", "**/*.exe", "**/*.pdb", "**/*.ilk",
+  "infamous-recomp/*.txt", "infamous-recomp/*.hlsl", "infamous-recomp/*.bin",
+  "infamous-recomp/play*.cmd", "infamous-recomp/perf*.cmd", "infamous-recomp/prof*.cmd",
+  "**/*.pre_*", "**/*.bak",
+  "**/*.tgz", "**/*.7z",
+  "Play inFamous.cmd",
+  # the installer's own build output, logs and per-install files
+  "installer/target/", "installer/*.log", "installer/launch.txt", "dist/",
+]
+keep = [
+  "installer/pgo/infamous.profdata",
+  "**/CMakeLists.txt",
+  "infamous-recomp/spu/jobmods_extra_map.json",
+  "infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v231.h",
+  "infamous-recomp/spu/jobmod_50f371dc382d_e3D90/lodx_v233.h",
+]
+
+# `infamous-installer update` and the setup's "Update now": where new versions come from. The repository
+# is the curated github/ working copy (publish-github.cmd pushes it). Only files whose content differs are downloaded.
+[update]
+repo = "whompay/inFAMOUSreborn"
+branch = "main"
+# Folder inside the repository that holds this tree ("" = the repository root).
+path = ""

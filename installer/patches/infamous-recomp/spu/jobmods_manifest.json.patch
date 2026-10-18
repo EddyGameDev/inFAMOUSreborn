@@ -1,0 +1,21 @@
+# eol lf
+--- a/infamous-recomp/spu/jobmods_manifest.json
++++ b/infamous-recomp/spu/jobmods_manifest.json
+@@ -40,7 +40,7 @@
+     "entry_off": 128,
+     "sig": "4348fa0242df388243e08502423d5982",
+     "size": 77312,
+-    "funcs": 942,
++    "funcs": 940,
+     "unsupported": 524
+   },
+   {
+@@ -51,7 +51,7 @@
+     "entry_off": 128,
+     "sig": "43916402431d988242c6a50242d7ff82",
+     "size": 97136,
+-    "funcs": 1049,
++    "funcs": 1048,
+     "unsupported": 740
+   },
+   {
