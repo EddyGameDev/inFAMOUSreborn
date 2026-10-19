@@ -1,0 +1,22 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "inFamous",
+  "system": "PS3",
+  "type": "recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "BCES00220"
+  },
+  "project": "inFamous PC",
+  "status": "playable",
+  "targets": ["Windows"],
+  "toolchain": "Ps3recomp",
+  "approach": "Static recompilation of the PPU and SPU code to x86-64 with a native Direct3D 12 runtime",
+  "maintainers": [
+    {
+      "name": "whompay",
+      "link": "https://github.com/whompay"
+    }
+  ],
+  "notes": "Native Windows port built from the player's own European BCES00220 disc dump; no game code or data is distributed."
+}
