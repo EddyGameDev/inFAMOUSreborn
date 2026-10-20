@@ -33,6 +33,9 @@ Setup need one run of the new Setup on the same folder first.
 
 - Your own inFamous disc dump, European release (`BCES00220`).
 - Windows 10 or 11 (64-bit) and a GPU with Direct3D 12 support.
+- A CPU with SSE4.1 (2008 or newer). On CPUs without AVX2 (Intel before 2013, Pentium/Celeron
+  without AVX, AMD before 2015) Setup builds a slower compatibility version automatically.
+  On PCs with 16 or fewer CPU threads the game uses fewer threads and less CPU (tested down to 4 threads).
 - [Python 3.10+](https://www.python.org/downloads/) with "Add python.exe to
   PATH" ticked.
 - [Visual Studio 2022 Build Tools](https://visualstudio.microsoft.com/downloads/)
